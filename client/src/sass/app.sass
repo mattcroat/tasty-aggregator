@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900')
+
+$primary-orange: hsl(22.2, 93.6%, 50.8%)
+$primary-white: hsl(0, 0%, 90%)
+$primary-text: hsl(0, 0%, 10%)
+
+\:root
+  font-size: 62.5%
+  
+*
+  margin: 0
+  padding: 0
+  box-sizing: inherit
+
+*, *::before, *::after
+  box-sizing: border-box
+  
+body
+  height: 100vh
+  background: url('https://i.imgur.com/loEuD8C.jpg')
+  font-family: 'Poppins', sans-serif
+  font-size: 1.6rem
+  color: $primary-text
+  border-top: 5px solid $primary-orange
+
+// Sticky footer
+.content
+  min-height: calc(100vh - 70px)
+
+.header
+  display: flex
+  align-items: baseline
+  justify-content: space-between
+
+  padding: 2rem 4rem
+
+.nav
+  width: 300px
+
+  display: flex
+  justify-content: space-between
+  
+  list-style: none
+
+  .nav__item__active
+    color: $primary-orange
+
+  a
+    padding: 1.4rem
+    border-radius: 4px
+    color: inherit
+    text-decoration: none
+    transition: all 0.2s linear
+
+    &:hover
+      color: $primary-white
+      background: hsl(22.2, 93.6%, 50.8%)
+
+.section
+  width: 600px
+  margin: 0 auto
+  margin-top: 4rem
+  background: hsl(0, 0%, 98%)
+  padding: 2rem 4rem
+  box-shadow: 5px 5px 20px hsla(0, 0%, 0%, 0.2)
+
+  .section__subtitle,
+  .post__title
+    text-transform: capitalize
+    margin-top: 4rem
+
+  .post__title
+    font-size: 2.6rem
+    font-weight: 900
+
+  .section__subtitle
+    border-bottom: 1px solid $primary-orange
+
+  .post__body
+    margin-top: 1rem
+    text-align: justify
+
+    &:first-letter
+      text-transform: capitalize
+
+  .post__time
+    font-size: 1.4rem
+    margin-top: 1rem
+    color: hsl(0, 0%, 60%)
+
+footer
+  width: 100%
+  background: $primary-orange
+  color: $primary-white
+  padding: 4rem
+  margin-top: 8rem
+  text-align: center
+  text-transform: capitalize
