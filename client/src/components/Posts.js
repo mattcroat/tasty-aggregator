@@ -22,10 +22,10 @@ export default function Posts({ posts }) {
           posts come from props.posts
           that we destructured already as posts
         */}
-				{posts.map(({ id, title, body, time }) => (
+				{posts.map(({ id, title, body, timestamp }) => (
 					<div className="post" key={id}>
 						<h3 className="post__title">{title}</h3>
-						<p className="post__time">{time}</p>
+						<p className="post__time">{timestamp}</p>
 						<p className="post__body">{truncateString(body, 140)}</p>
 					</div>
 				))}
