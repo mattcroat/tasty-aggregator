@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 // Simple stateless function component,
 // couple of things are different in these,
@@ -32,4 +33,8 @@ export default function Posts({ posts }) {
 			</article>
 		</section>
 	)
+}
+
+Posts.propTypes = {
+	posts: PropTypes.object.isRequired,
 }
